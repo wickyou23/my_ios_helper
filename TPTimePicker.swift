@@ -219,7 +219,6 @@ class TPTimePicker: UIView {
             NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subView]-0-|", metrics: nil, views: ["subView": hStack])
         )
         
-        
         pickerView.addSubview(contentEditableView)
         contentEditableView.centerYAnchor.constraint(equalTo: pickerView.centerYAnchor, constant: 0).isActive = true
         pickerView.addConstraints(
