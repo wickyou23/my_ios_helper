@@ -407,6 +407,11 @@ extension TPTimePicker: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        debugPrint("scrolling - (\(component),\(row))")
+        if tapGesture.editableType == .cancel {
+            tapGesture.isEnabled = false
+        }
+        
         var contentView: UIView!
         if let mContentView = view {
             contentView = mContentView
@@ -438,6 +443,9 @@ extension TPTimePicker: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        debugPrint("end scroll - (\(component),\(row))")
+        tapGesture.isEnabled = true
+        
         if component == 0 {
             hrsSelected = row % maxHours
         }
