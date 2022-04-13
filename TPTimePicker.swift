@@ -408,7 +408,7 @@ extension TPTimePicker: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         debugPrint("scrolling - (\(component),\(row))")
-        if tapGesture.editableType == .cancel {
+        if tapGesture.editableType == .cancel && tapGesture.state != .possible {
             tapGesture.isEnabled = false
         }
         
@@ -516,6 +516,7 @@ fileprivate class TPTimePickerGesture: UIGestureRecognizer {
             beginPoint = touch.location(in: gestureView)
         }
         
+        state = .began
         super.touchesBegan(touches, with: event)
     }
     
@@ -526,11 +527,15 @@ fileprivate class TPTimePickerGesture: UIGestureRecognizer {
             if y > 16 && editableType != .cancel {
                 editableType = .cancel
                 didTouchCompleted(editableType)
-                state = .ended
+                
                 print("================== end editing \(y)")
+                state = .ended
+                super.touchesMoved(touches, with: event)
+                return
             }
         }
         
+        state = .changed
         super.touchesMoved(touches, with: event)
     }
     
@@ -578,6 +583,7 @@ fileprivate class TPTimePickerGesture: UIGestureRecognizer {
             }
         }
         
+        state = .ended
         super.touchesEnded(touches, with: event)
     }
     
