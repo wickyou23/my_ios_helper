@@ -588,6 +588,7 @@ fileprivate class TPTimePickerGesture: UIGestureRecognizer {
     }
     
     @objc fileprivate func handleKeyboardWillHide() {
+        state = .possible
         editableType = .cancel
     }
 }
