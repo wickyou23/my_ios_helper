@@ -310,7 +310,7 @@ class TPTimePicker: UIView {
                 hoursValueLabel.text = String(format: "%d", hrsSelected)
                 minValueLabel.text = String(format: "%02d", minSelected)
                 handleDidSelectedTime()
-                print("hours: \(hrsSelected) - min: \(minSelected)")
+                debugPrint("hours: \(hrsSelected) - min: \(minSelected)")
             }
         case .hours:
             if text.isEmpty {
@@ -328,7 +328,7 @@ class TPTimePicker: UIView {
             pickerView.selectRow((Int(pickerHoursSelected / maxHours) * maxHours) + hrsSelected, inComponent: 0, animated: true)
             hoursValueLabel.text = String(format: "%d", hrsSelected)
             handleDidSelectedTime()
-            print("hours: \(hrsSelected) - min: \(minSelected)")
+            debugPrint("hours: \(hrsSelected) - min: \(minSelected)")
         case .minute:
             if text.isEmpty {
                 minSelected = min(Int(minimumTime.truncatingRemainder(dividingBy: 3600) / 60), maxMinutes - 1)
@@ -345,7 +345,7 @@ class TPTimePicker: UIView {
             pickerView.selectRow((Int(pickerMinSelected / maxMinutes) * maxMinutes) + minSelected, inComponent: 1, animated: true)
             minValueLabel.text = String(format: "%02d", minSelected)
             handleDidSelectedTime()
-            print("hours: \(hrsSelected) - min: \(minSelected)")
+            debugPrint("hours: \(hrsSelected) - min: \(minSelected)")
         default:
             break
         }
@@ -528,7 +528,7 @@ fileprivate class TPTimePickerGesture: UIGestureRecognizer {
                 editableType = .cancel
                 didTouchCompleted(editableType)
                 
-                print("================== end editing \(y)")
+                debugPrint("================== end editing \(y)")
                 state = .ended
                 super.touchesMoved(touches, with: event)
                 return
