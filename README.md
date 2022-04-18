@@ -2,4 +2,4 @@
 
 #1 TPTimePicker
 
-![Simulator Screen Shot - iPhone 13 Pro - 2022-04-07 at 15 27 25](https://user-images.githubusercontent.com/5183190/162157395-510f71a6-1a59-40f3-a79e-6b61e4c84037.png)
+![ezgif-5-c2e8907c3e](https://user-images.githubusercontent.com/5183190/163779436-e85a8041-0912-4673-9e52-c7f08ad42552.gif)
