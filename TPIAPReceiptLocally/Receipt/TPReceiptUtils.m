@@ -1,15 +1,15 @@
 //
 //  TPUtils.m
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 02/06/2021.
 //
 
-#import "TPIAPUtils.h"
+#import "TPReceiptUtils.h"
 #import "OpenSSL.h"
 #import <CommonCrypto/CommonDigest.h>
 
-@implementation TPIAPUtils
+@implementation TPReceiptUtils
 
 +(nullable NSString*)generateSignatureLocallyWithPrivateKey:(nonnull NSData*)privateKeyData
                                                  andPayload:(nonnull NSString*)payload {

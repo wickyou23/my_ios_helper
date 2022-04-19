@@ -1,13 +1,13 @@
 //
 //  IAPReceipt.h
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface TPIAPReceipt : NSObject
+@interface TPReceiptData : NSObject
 
 @property (nonatomic, nullable) NSNumber *quantity;
 @property (nonatomic, nullable) NSString *productIdentifier;

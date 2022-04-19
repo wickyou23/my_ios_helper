@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  TPAPReceiptLocallyExample-iOS
+//  TPIAPReceiptLocallyExample-iOS
 //
 //  Created by Thang Phung on 27/05/2021.
 //

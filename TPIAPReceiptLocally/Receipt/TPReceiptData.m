@@ -1,13 +1,13 @@
 //
 //  IAPReceipt.m
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
 
-#import "TPIAPReceipt.h"
+#import "TPReceiptData.h"
 #import "OpenSSL.h"
-#import "TPIAPHelper.h"
+#import "TPReceiptHelper.h"
 
 NSInteger const TPAppReceiptASN1TypeQuantity = 1701;
 NSInteger const TPAppReceiptASN1TypeProductIdentifier = 1702;
@@ -19,7 +19,7 @@ NSInteger const TPAppReceiptASN1TypeSubscriptionExpirationDate = 1708;
 NSInteger const TPAppReceiptASN1TypeWebOrderLineItemID = 1711;
 NSInteger const TPAppReceiptASN1TypeCancellationDate = 1712;
 
-@implementation TPIAPReceipt
+@implementation TPReceiptData
 
 - (instancetype)initWithPointer:(const uint8_t *)p andPayloadLength:(long)payloadLength {
     self = [super init];
@@ -40,12 +40,12 @@ NSInteger const TPAppReceiptASN1TypeCancellationDate = 1712;
                 return NULL;
             }
             
-            NSNumber *attributeType = [TPIAPHelper readASN1Integer:&p andMaxLength:end - p];
+            NSNumber *attributeType = [TPReceiptHelper readASN1Integer:&p andMaxLength:end - p];
             if (attributeType == NULL) {
                 return NULL;
             }
             
-            NSNumber *attributeType2 = [TPIAPHelper readASN1Integer:&p andMaxLength:end - p];
+            NSNumber *attributeType2 = [TPReceiptHelper readASN1Integer:&p andMaxLength:end - p];
             if (attributeType2 == NULL) {
                 return NULL;
             }
@@ -58,47 +58,47 @@ NSInteger const TPAppReceiptASN1TypeCancellationDate = 1712;
             switch (attributeType.longValue) {
                 case TPAppReceiptASN1TypeQuantity: {
                     const uint8_t *pp = p;
-                    [self setQuantity:[TPIAPHelper readASN1Integer:&pp andMaxLength:length]];
+                    [self setQuantity:[TPReceiptHelper readASN1Integer:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeProductIdentifier: {
                     const uint8_t *pp = p;
-                    [self setProductIdentifier:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
+                    [self setProductIdentifier:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeTransactionIdentifier: {
                     const uint8_t *pp = p;
-                    [self setTransactionIdentifer:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
+                    [self setTransactionIdentifer:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypePurchaseDate: {
                     const uint8_t *pp = p;
-                    [self setPurchaseDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                    [self setPurchaseDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeOriginalTransactionIdentifier: {
                     const uint8_t *pp = p;
-                    [self setOriginalTransactionIdentifier:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
+                    [self setOriginalTransactionIdentifier:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeOriginalPurchaseDate: {
                     const uint8_t *pp = p;
-                    [self setOriginalPurchaseDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                    [self setOriginalPurchaseDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeSubscriptionExpirationDate: {
                     const uint8_t *pp = p;
-                    [self setSubscriptionExpirationDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                    [self setSubscriptionExpirationDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeWebOrderLineItemID: {
                     const uint8_t *pp = p;
-                    [self setWebOrderLineId:[TPIAPHelper readASN1Integer:&pp andMaxLength:length]];
+                    [self setWebOrderLineId:[TPReceiptHelper readASN1Integer:&pp andMaxLength:length]];
                 }
                     break;
                 case TPAppReceiptASN1TypeCancellationDate: {
                     const uint8_t *pp = p;
-                    [self setSubscriptionCancellationDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                    [self setSubscriptionCancellationDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
                 }
                     break;
                 default:

@@ -1,6 +1,6 @@
 //
 //  IAPHelper.h
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
@@ -11,7 +11,7 @@ typedef const uint8_t *_Nonnull*_Nonnull CUINT8_T;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TPIAPHelper : NSObject
+@interface TPReceiptHelper : NSObject
 
 + (nullable NSNumber*)readASN1Integer:(CUINT8_T)p andMaxLength:(long)maxLength;
 + (nullable NSString*)readASN1String:(CUINT8_T)p andMaxLength:(long)maxLength;

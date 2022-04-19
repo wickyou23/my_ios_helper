@@ -1,17 +1,17 @@
 //
-//  TPAPReceiptLocallyTests.m
-//  TPAPReceiptLocallyTests
+//  TPIAPReceiptLocallyTests.m
+//  TPIAPReceiptLocallyTests
 //
 //  Created by Thang Phung on 26/05/2021.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface TPAPReceiptLocallyTests : XCTestCase
+@interface TPIAPReceiptLocallyTests : XCTestCase
 
 @end
 
-@implementation TPAPReceiptLocallyTests
+@implementation TPIAPReceiptLocallyTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.

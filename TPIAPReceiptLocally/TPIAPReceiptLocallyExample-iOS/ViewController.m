@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  TPAPReceiptLocallyExample-iOS
+//  TPIAPReceiptLocallyExample-iOS
 //
 //  Created by Thang Phung on 27/05/2021.
 //
@@ -38,7 +38,7 @@
 
 
     NSData *receiptData = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
-    TPReceipt *tpReceipt = [[TPReceipt alloc] initWithAppBundle:[NSBundle mainBundle] andReceiptData:receiptData andCertificateName:@"AppleIncRootCertificate"];
+    TPReceiptDecoder *tpReceipt = [[TPReceipt alloc] initWithAppBundle:[NSBundle mainBundle] andReceiptData:receiptData andCertificateName:@"AppleIncRootCertificate"];
     NSLog(@"%@", tpReceipt);
 }
 

@@ -1,11 +1,11 @@
 //
 //  TPReceiptEnum.h
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 31/05/2021.
 //
 
-typedef NS_ENUM(NSUInteger, TPReceiptStatus) {
+typedef NS_ENUM(NSUInteger, TPReceiptDecoderStatus) {
     kValidationSuccess,
     kNoReceiptPresent,
     kUnknownFailure,

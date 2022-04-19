@@ -1,6 +1,6 @@
 //
 //  Receipt.h
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
@@ -25,9 +25,9 @@ To validate the receipt, perform the following tests, in order:
 - If the result does not match the hash in the receipt, validation fails.
 */
 
-@interface TPReceipt : NSObject
+@interface TPReceiptDecoder : NSObject
 
-@property (nonatomic, assign) TPReceiptStatus receiptStatus;
+@property (nonatomic, assign) TPReceiptDecoderStatus receiptStatus;
 @property (nonatomic, nullable) NSMutableDictionary *inAppReceipts;
 
 //MARK: - For Production or Sandbox verify

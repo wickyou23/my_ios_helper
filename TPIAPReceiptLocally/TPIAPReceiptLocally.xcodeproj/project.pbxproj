@@ -21,9 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A78BECEE26A6DF6600FF2739 /* TPAPReceiptLocally_Simulator.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D36AB7269D90C100C668E5 /* TPAPReceiptLocally_Simulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A794A128266721B7009AE52D /* TPIAPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A794A126266721B7009AE52D /* TPIAPUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A794A129266721B7009AE52D /* TPIAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A794A127266721B7009AE52D /* TPIAPUtils.m */; };
+		A78BECEE26A6DF6600FF2739 /* TPIAPReceiptLocally_Simulator.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D36AB7269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A794A128266721B7009AE52D /* TPReceiptUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A794A126266721B7009AE52D /* TPReceiptUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A794A129266721B7009AE52D /* TPReceiptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A794A127266721B7009AE52D /* TPReceiptUtils.m */; };
 		A796E96426786794001F843A /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = A7D790B5265FB32400B39397 /* StoreKitTestCertificate.cer */; };
 		A796E96F26788726001F843A /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = A796E96E26788726001F843A /* AppleIncRootCertificate.cer */; };
 		A79FB1F4272BAF5D0060F357 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = A7D790B5265FB32400B39397 /* StoreKitTestCertificate.cer */; };
@@ -34,7 +34,7 @@
 		A79FB1F9272BB3D60060F357 /* TPIAPReceiptLocally_Simulator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7D36AB5269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7C45C0E266495E700239258 /* TPReceiptEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C45C0D2664950B00239258 /* TPReceiptEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7D36ABE269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D36AB5269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.framework */; };
-		A7D36AC3269D90C100C668E5 /* TPAPReceiptLocally_SimulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D36AC2269D90C100C668E5 /* TPAPReceiptLocally_SimulatorTests.m */; };
+		A7D36AC3269D90C100C668E5 /* TPIAPReceiptLocally_SimulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D36AC2269D90C100C668E5 /* TPIAPReceiptLocally_SimulatorTests.m */; };
 		A7D36B48269D91C200C668E5 /* pem2.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D36ADC269D91C200C668E5 /* pem2.h */; };
 		A7D36B49269D91C200C668E5 /* kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D36ADD269D91C200C668E5 /* kdf.h */; };
 		A7D36B4A269D91C200C668E5 /* pem.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D36ADE269D91C200C668E5 /* pem.h */; };
@@ -251,23 +251,23 @@
 		A7D36C8C269D920900C668E5 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D36C21269D920900C668E5 /* libssl.a */; };
 		A7D36C8D269D92B100C668E5 /* OpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79025265E2C2A00B39397 /* OpenSSL.h */; };
 		A7D36C8E269D92B200C668E5 /* OpenSSL.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79025265E2C2A00B39397 /* OpenSSL.h */; };
-		A7D36C8F269D92B200C668E5 /* TPIAPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A794A127266721B7009AE52D /* TPIAPUtils.m */; };
+		A7D36C8F269D92B200C668E5 /* TPReceiptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A794A127266721B7009AE52D /* TPReceiptUtils.m */; };
 		A7D36C90269D92B200C668E5 /* TPReceiptEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C45C0D2664950B00239258 /* TPReceiptEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D36C91269D92B200C668E5 /* TPReceipt.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79021265E100F00B39397 /* TPReceipt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D36C92269D92B200C668E5 /* TPIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D7902B265E6C7A00B39397 /* TPIAPHelper.m */; };
-		A7D36C93269D92B200C668E5 /* TPIAPHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D7902A265E6C7A00B39397 /* TPIAPHelper.h */; };
-		A7D36C94269D92B200C668E5 /* TPIAPReceipt.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79026265E51DE00B39397 /* TPIAPReceipt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D36C95269D92B200C668E5 /* TPIAPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A794A126266721B7009AE52D /* TPIAPUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D36C96269D92B200C668E5 /* TPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79022265E100F00B39397 /* TPReceipt.m */; };
-		A7D36C97269D92B200C668E5 /* TPIAPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79027265E51DE00B39397 /* TPIAPReceipt.m */; };
+		A7D36C91269D92B200C668E5 /* TPReceiptDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79021265E100F00B39397 /* TPReceiptDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D36C92269D92B200C668E5 /* TPReceiptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D7902B265E6C7A00B39397 /* TPReceiptHelper.m */; };
+		A7D36C93269D92B200C668E5 /* TPReceiptHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D7902A265E6C7A00B39397 /* TPReceiptHelper.h */; };
+		A7D36C94269D92B200C668E5 /* TPReceiptData.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79026265E51DE00B39397 /* TPReceiptData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D36C95269D92B200C668E5 /* TPReceiptUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A794A126266721B7009AE52D /* TPReceiptUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D36C96269D92B200C668E5 /* TPReceiptDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79022265E100F00B39397 /* TPReceiptDecoder.m */; };
+		A7D36C97269D92B200C668E5 /* TPReceiptData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79027265E51DE00B39397 /* TPReceiptData.m */; };
 		A7D78F34265E0F8600B39397 /* TPIAPReceiptLocally.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D78F2A265E0F8500B39397 /* TPIAPReceiptLocally.framework */; };
-		A7D78F39265E0F8600B39397 /* TPAPReceiptLocallyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D78F38265E0F8600B39397 /* TPAPReceiptLocallyTests.m */; };
-		A7D78F3B265E0F8600B39397 /* TPAPReceiptLocally.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D78F2D265E0F8500B39397 /* TPAPReceiptLocally.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D79024265E100F00B39397 /* TPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79022265E100F00B39397 /* TPReceipt.m */; };
-		A7D79028265E51DE00B39397 /* TPIAPReceipt.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79026265E51DE00B39397 /* TPIAPReceipt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7D79029265E51DE00B39397 /* TPIAPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79027265E51DE00B39397 /* TPIAPReceipt.m */; };
-		A7D7902C265E6C7A00B39397 /* TPIAPHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D7902A265E6C7A00B39397 /* TPIAPHelper.h */; };
-		A7D7902D265E6C7A00B39397 /* TPIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D7902B265E6C7A00B39397 /* TPIAPHelper.m */; };
+		A7D78F39265E0F8600B39397 /* TPIAPReceiptLocallyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D78F38265E0F8600B39397 /* TPIAPReceiptLocallyTests.m */; };
+		A7D78F3B265E0F8600B39397 /* TPIAPReceiptLocally.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D78F2D265E0F8500B39397 /* TPIAPReceiptLocally.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D79024265E100F00B39397 /* TPReceiptDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79022265E100F00B39397 /* TPReceiptDecoder.m */; };
+		A7D79028265E51DE00B39397 /* TPReceiptData.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79026265E51DE00B39397 /* TPReceiptData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D79029265E51DE00B39397 /* TPReceiptData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D79027265E51DE00B39397 /* TPReceiptData.m */; };
+		A7D7902C265E6C7A00B39397 /* TPReceiptHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D7902A265E6C7A00B39397 /* TPReceiptHelper.h */; };
+		A7D7902D265E6C7A00B39397 /* TPReceiptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D7902B265E6C7A00B39397 /* TPReceiptHelper.m */; };
 		A7D790C0265FBD7F00B39397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D790BF265FBD7F00B39397 /* AppDelegate.m */; };
 		A7D790C3265FBD7F00B39397 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D790C2265FBD7F00B39397 /* SceneDelegate.m */; };
 		A7D790C6265FBD7F00B39397 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D790C5265FBD7F00B39397 /* ViewController.m */; };
@@ -275,7 +275,7 @@
 		A7D790CB265FBD7F00B39397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D790CA265FBD7F00B39397 /* Assets.xcassets */; };
 		A7D790CE265FBD7F00B39397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D790CC265FBD7F00B39397 /* LaunchScreen.storyboard */; };
 		A7D790D1265FBD7F00B39397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D790D0265FBD7F00B39397 /* main.m */; };
-		A7D790F1265FBE8300B39397 /* TPReceipt.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79021265E100F00B39397 /* TPReceipt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D790F1265FBE8300B39397 /* TPReceiptDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D79021265E100F00B39397 /* TPReceiptDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,18 +317,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A794A126266721B7009AE52D /* TPIAPUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPIAPUtils.h; sourceTree = "<group>"; };
-		A794A127266721B7009AE52D /* TPIAPUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPIAPUtils.m; sourceTree = "<group>"; };
+		A794A126266721B7009AE52D /* TPReceiptUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiptUtils.h; sourceTree = "<group>"; };
+		A794A127266721B7009AE52D /* TPReceiptUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceiptUtils.m; sourceTree = "<group>"; };
 		A794A12A26672F22009AE52D /* Subscription_PublicKey_VAHGW28TLQ.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = Subscription_PublicKey_VAHGW28TLQ.der; sourceTree = "<group>"; };
 		A794A12B26672F22009AE52D /* Subscription_PrivateKey_VAHGW28TLQ.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = Subscription_PrivateKey_VAHGW28TLQ.der; sourceTree = "<group>"; };
 		A794A13026673CD8009AE52D /* Subscription_PublicKey_VAHGW28TLQ.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Subscription_PublicKey_VAHGW28TLQ.pem; sourceTree = "<group>"; };
 		A796E96E26788726001F843A /* AppleIncRootCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleIncRootCertificate.cer; sourceTree = "<group>"; };
 		A7C45C0D2664950B00239258 /* TPReceiptEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiptEnum.h; sourceTree = "<group>"; };
 		A7D36AB5269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPIAPReceiptLocally_Simulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7D36AB7269D90C100C668E5 /* TPAPReceiptLocally_Simulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAPReceiptLocally_Simulator.h; sourceTree = "<group>"; };
+		A7D36AB7269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPIAPReceiptLocally_Simulator.h; sourceTree = "<group>"; };
 		A7D36AB8269D90C100C668E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D36ABD269D90C100C668E5 /* TPIAPReceiptLocally-SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TPIAPReceiptLocally-SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7D36AC2269D90C100C668E5 /* TPAPReceiptLocally_SimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAPReceiptLocally_SimulatorTests.m; sourceTree = "<group>"; };
+		A7D36AC2269D90C100C668E5 /* TPIAPReceiptLocally_SimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPIAPReceiptLocally_SimulatorTests.m; sourceTree = "<group>"; };
 		A7D36AC4269D90C100C668E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D36ADC269D91C200C668E5 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
 		A7D36ADD269D91C200C668E5 /* kdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kdf.h; sourceTree = "<group>"; };
@@ -545,18 +545,18 @@
 		A7D36C20269D920900C668E5 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		A7D36C21269D920900C668E5 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		A7D78F2A265E0F8500B39397 /* TPIAPReceiptLocally.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPIAPReceiptLocally.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7D78F2D265E0F8500B39397 /* TPAPReceiptLocally.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPAPReceiptLocally.h; sourceTree = "<group>"; };
+		A7D78F2D265E0F8500B39397 /* TPIAPReceiptLocally.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPIAPReceiptLocally.h; sourceTree = "<group>"; };
 		A7D78F2E265E0F8500B39397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D78F33265E0F8500B39397 /* TPIAPReceiptLocallyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPIAPReceiptLocallyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7D78F38265E0F8600B39397 /* TPAPReceiptLocallyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPAPReceiptLocallyTests.m; sourceTree = "<group>"; };
+		A7D78F38265E0F8600B39397 /* TPIAPReceiptLocallyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPIAPReceiptLocallyTests.m; sourceTree = "<group>"; };
 		A7D78F3A265E0F8600B39397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7D79021265E100F00B39397 /* TPReceipt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceipt.h; sourceTree = "<group>"; };
-		A7D79022265E100F00B39397 /* TPReceipt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceipt.m; sourceTree = "<group>"; };
+		A7D79021265E100F00B39397 /* TPReceiptDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiptDecoder.h; sourceTree = "<group>"; };
+		A7D79022265E100F00B39397 /* TPReceiptDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceiptDecoder.m; sourceTree = "<group>"; };
 		A7D79025265E2C2A00B39397 /* OpenSSL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenSSL.h; sourceTree = "<group>"; };
-		A7D79026265E51DE00B39397 /* TPIAPReceipt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPIAPReceipt.h; sourceTree = "<group>"; };
-		A7D79027265E51DE00B39397 /* TPIAPReceipt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPIAPReceipt.m; sourceTree = "<group>"; };
-		A7D7902A265E6C7A00B39397 /* TPIAPHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPIAPHelper.h; sourceTree = "<group>"; };
-		A7D7902B265E6C7A00B39397 /* TPIAPHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPIAPHelper.m; sourceTree = "<group>"; };
+		A7D79026265E51DE00B39397 /* TPReceiptData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiptData.h; sourceTree = "<group>"; };
+		A7D79027265E51DE00B39397 /* TPReceiptData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceiptData.m; sourceTree = "<group>"; };
+		A7D7902A265E6C7A00B39397 /* TPReceiptHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPReceiptHelper.h; sourceTree = "<group>"; };
+		A7D7902B265E6C7A00B39397 /* TPReceiptHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPReceiptHelper.m; sourceTree = "<group>"; };
 		A7D790B5265FB32400B39397 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		A7D790BC265FBD7F00B39397 /* TPIAPReceiptLocallyExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TPIAPReceiptLocallyExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D790BE265FBD7F00B39397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -622,7 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				A7D36BB3269D920900C668E5 /* OpenSSL_1_1_1k */,
-				A7D36AB7269D90C100C668E5 /* TPAPReceiptLocally_Simulator.h */,
+				A7D36AB7269D90C100C668E5 /* TPIAPReceiptLocally_Simulator.h */,
 				A7D36AB8269D90C100C668E5 /* Info.plist */,
 			);
 			path = "TPIAPReceiptLocally-Simulator";
@@ -631,7 +631,7 @@
 		A7D36AC1269D90C100C668E5 /* TPIAPReceiptLocally-SimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7D36AC2269D90C100C668E5 /* TPAPReceiptLocally_SimulatorTests.m */,
+				A7D36AC2269D90C100C668E5 /* TPIAPReceiptLocally_SimulatorTests.m */,
 				A7D36AC4269D90C100C668E5 /* Info.plist */,
 			);
 			path = "TPIAPReceiptLocally-SimulatorTests";
@@ -948,7 +948,7 @@
 				A794A12A26672F22009AE52D /* Subscription_PublicKey_VAHGW28TLQ.der */,
 				A7D790B5265FB32400B39397 /* StoreKitTestCertificate.cer */,
 				A796E96E26788726001F843A /* AppleIncRootCertificate.cer */,
-				A7D78F2D265E0F8500B39397 /* TPAPReceiptLocally.h */,
+				A7D78F2D265E0F8500B39397 /* TPIAPReceiptLocally.h */,
 				A7D78F2E265E0F8500B39397 /* Info.plist */,
 			);
 			path = TPIAPReceiptLocally;
@@ -957,7 +957,7 @@
 		A7D78F37265E0F8600B39397 /* TPIAPReceiptLocallyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7D78F38265E0F8600B39397 /* TPAPReceiptLocallyTests.m */,
+				A7D78F38265E0F8600B39397 /* TPIAPReceiptLocallyTests.m */,
 				A7D78F3A265E0F8600B39397 /* Info.plist */,
 			);
 			path = TPIAPReceiptLocallyTests;
@@ -967,15 +967,15 @@
 			isa = PBXGroup;
 			children = (
 				A7D79025265E2C2A00B39397 /* OpenSSL.h */,
-				A7D79021265E100F00B39397 /* TPReceipt.h */,
-				A7D79022265E100F00B39397 /* TPReceipt.m */,
-				A7D79026265E51DE00B39397 /* TPIAPReceipt.h */,
-				A7D79027265E51DE00B39397 /* TPIAPReceipt.m */,
-				A7D7902A265E6C7A00B39397 /* TPIAPHelper.h */,
-				A7D7902B265E6C7A00B39397 /* TPIAPHelper.m */,
+				A7D79021265E100F00B39397 /* TPReceiptDecoder.h */,
+				A7D79022265E100F00B39397 /* TPReceiptDecoder.m */,
+				A7D79026265E51DE00B39397 /* TPReceiptData.h */,
+				A7D79027265E51DE00B39397 /* TPReceiptData.m */,
+				A7D7902A265E6C7A00B39397 /* TPReceiptHelper.h */,
+				A7D7902B265E6C7A00B39397 /* TPReceiptHelper.m */,
 				A7C45C0D2664950B00239258 /* TPReceiptEnum.h */,
-				A794A126266721B7009AE52D /* TPIAPUtils.h */,
-				A794A127266721B7009AE52D /* TPIAPUtils.m */,
+				A794A126266721B7009AE52D /* TPReceiptUtils.h */,
+				A794A127266721B7009AE52D /* TPReceiptUtils.m */,
 			);
 			path = Receipt;
 			sourceTree = "<group>";
@@ -1075,7 +1075,7 @@
 				A7D36C61269D920900C668E5 /* pkcs12err.h in Headers */,
 				A7D36C35269D920900C668E5 /* sha.h in Headers */,
 				A7D36C6F269D920900C668E5 /* seed.h in Headers */,
-				A7D36C91269D92B200C668E5 /* TPReceipt.h in Headers */,
+				A7D36C91269D92B200C668E5 /* TPReceiptDecoder.h in Headers */,
 				A7D36C7D269D920900C668E5 /* dsa.h in Headers */,
 				A7D36C34269D920900C668E5 /* ui.h in Headers */,
 				A7D36C30269D920900C668E5 /* x509.h in Headers */,
@@ -1099,15 +1099,15 @@
 				A7D36C22269D920900C668E5 /* pem2.h in Headers */,
 				A7D36C4C269D920900C668E5 /* objects.h in Headers */,
 				A7D36C76269D920900C668E5 /* tls1.h in Headers */,
-				A7D36C95269D92B200C668E5 /* TPIAPUtils.h in Headers */,
+				A7D36C95269D92B200C668E5 /* TPReceiptUtils.h in Headers */,
 				A7D36C78269D920900C668E5 /* randerr.h in Headers */,
-				A7D36C93269D92B200C668E5 /* TPIAPHelper.h in Headers */,
+				A7D36C93269D92B200C668E5 /* TPReceiptHelper.h in Headers */,
 				A7D36C28269D920900C668E5 /* ossl_typ.h in Headers */,
 				A7D36C56269D920900C668E5 /* ssl.h in Headers */,
-				A78BECEE26A6DF6600FF2739 /* TPAPReceiptLocally_Simulator.h in Headers */,
+				A78BECEE26A6DF6600FF2739 /* TPIAPReceiptLocally_Simulator.h in Headers */,
 				A7D36C65269D920900C668E5 /* des.h in Headers */,
 				A7D36C36269D920900C668E5 /* symhacks.h in Headers */,
-				A7D36C94269D92B200C668E5 /* TPIAPReceipt.h in Headers */,
+				A7D36C94269D92B200C668E5 /* TPReceiptData.h in Headers */,
 				A7D36C41269D920900C668E5 /* pemerr.h in Headers */,
 				A7D36C7C269D920900C668E5 /* pkcs7err.h in Headers */,
 				A7D36C3E269D920900C668E5 /* conf.h in Headers */,
@@ -1144,7 +1144,7 @@
 				A7D36B4E269D91C200C668E5 /* ossl_typ.h in Headers */,
 				A7D36B59269D91C200C668E5 /* cmserr.h in Headers */,
 				A7D36B7A269D91C200C668E5 /* async.h in Headers */,
-				A794A128266721B7009AE52D /* TPIAPUtils.h in Headers */,
+				A794A128266721B7009AE52D /* TPReceiptUtils.h in Headers */,
 				A7D36BA7269D91C200C668E5 /* dsaerr.h in Headers */,
 				A7D36B7D269D91C200C668E5 /* srp.h in Headers */,
 				A7D36BA2269D91C200C668E5 /* pkcs7err.h in Headers */,
@@ -1186,7 +1186,7 @@
 				A7D36BA4269D91C200C668E5 /* kdferr.h in Headers */,
 				A7D36B7C269D91C200C668E5 /* ssl.h in Headers */,
 				A7D36B6F269D91C200C668E5 /* rc5.h in Headers */,
-				A7D7902C265E6C7A00B39397 /* TPIAPHelper.h in Headers */,
+				A7D7902C265E6C7A00B39397 /* TPReceiptHelper.h in Headers */,
 				A7D36B85269D91C200C668E5 /* engineerr.h in Headers */,
 				A7D36B93269D91C200C668E5 /* storeerr.h in Headers */,
 				A7D36BAB269D91C200C668E5 /* ebcdic.h in Headers */,
@@ -1196,7 +1196,7 @@
 				A7D36B87269D91C200C668E5 /* pkcs12err.h in Headers */,
 				A7D36B58269D91C200C668E5 /* objectserr.h in Headers */,
 				A7D36B78269D91C200C668E5 /* obj_mac.h in Headers */,
-				A7D790F1265FBE8300B39397 /* TPReceipt.h in Headers */,
+				A7D790F1265FBE8300B39397 /* TPReceiptDecoder.h in Headers */,
 				A7D36B48269D91C200C668E5 /* pem2.h in Headers */,
 				A7D36C8D269D92B100C668E5 /* OpenSSL.h in Headers */,
 				A7D36B8D269D91C200C668E5 /* ec.h in Headers */,
@@ -1207,7 +1207,7 @@
 				A7D36B79269D91C200C668E5 /* ct.h in Headers */,
 				A7D36B9C269D91C200C668E5 /* tls1.h in Headers */,
 				A7D36BA8269D91C200C668E5 /* bnerr.h in Headers */,
-				A7D79028265E51DE00B39397 /* TPIAPReceipt.h in Headers */,
+				A7D79028265E51DE00B39397 /* TPReceiptData.h in Headers */,
 				A7D36B74269D91C200C668E5 /* crypto.h in Headers */,
 				A7D36B98269D91C200C668E5 /* tserr.h in Headers */,
 				A7D36B62269D91C200C668E5 /* dh.h in Headers */,
@@ -1241,7 +1241,7 @@
 				A7D36B72269D91C200C668E5 /* objects.h in Headers */,
 				A7D36B69269D91C200C668E5 /* txt_db.h in Headers */,
 				A7D36BB0269D91C200C668E5 /* asn1err.h in Headers */,
-				A7D78F3B265E0F8600B39397 /* TPAPReceiptLocally.h in Headers */,
+				A7D78F3B265E0F8600B39397 /* TPIAPReceiptLocally.h in Headers */,
 				A7D36B97269D91C200C668E5 /* ssl2.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1455,7 +1455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"######################\"\necho \"# Start building\"\necho \"######################\"\n\nset -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\n\necho \"######################\"\necho \"# Options\"\necho \"######################\"\n\nCONFIGURATION_BUILD=\"Release\"\nREVEAL_ARCHIVE_IN_FINDER=true\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\nFRAMEWORK_NAME_SIMULATOR=\"${PROJECT_NAME}_Simulator\"\n\nARM64_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-iphoneos/${FRAMEWORK_NAME}.xcarchive\"\nX86_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-iphonesimulator/${FRAMEWORK_NAME_SIMULATOR}.xcarchive\"\nUNIVERSAL_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-universal/${FRAMEWORK_NAME}.xcframework\"\n\n\necho \"######################\"\necho \"# Build Frameworks\"\necho \"######################\"\n\nxcodebuild clean build archive \\\n-scheme TPIAPReceiptLocally \\\n-configuration \"${CONFIGURATION_BUILD}\" \\\n-sdk iphoneos \\\n-destination \"generic/platform=iOS\" \\\n-archivePath \"${ARM64_BUILD}\" \\\n-UseModernBuildSystem=NO \\\nSKIP_INSTALL=NO \\\nOBJROOT=\"${OBJROOT}/DependentBuilds\"\\\nBUILD_LIBRARIES_FOR_DISTRIBUTION=YES;\n\nfunction GetUUID() {\n    # dwarfdump output:\n    # UUID: FFFFFFF-AAAAA-BBBB-CCCC-DDDDDDDDDD (arm64) PATH_TO_ARCHIVE/FRAMEWORK.framework-ios-arm64.xcarchive/Products/Library/Frameworks/FRAMEWORK.framework/FRAMEWORK\n    local arch=$1\n    local binary=$2\n    local dwarfdump_result=$(dwarfdump -u ${binary})\n    local regex=\"UUID: (.*) \\((.*)\\)\"\n    if [[ $dwarfdump_result =~ $regex ]]; then\n        local result_uuid=\"${BASH_REMATCH[1]}\"\n        local result_arch=\"${BASH_REMATCH[2]}\"\n        if [ \"$result_arch\" == \"$arch\" ]; then\n            echo $result_uuid\n        fi\n    fi\n}\n\nBCSYMBOLMAP_UUID=$(GetUUID \"arm64\" \"${ARM64_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\")\n\nxcodebuild archive \\\n-scheme TPIAPReceiptLocally-Simulator \\\n-configuration \"${CONFIGURATION_BUILD}\" \\\n-sdk iphonesimulator \\\n-destination \"generic/platform=iOS Simulator\" \\\n-archivePath \"${X86_BUILD}\" \\\n-UseModernBuildSystem=NO \\\nSKIP_INSTALL=NO \\\nOBJROOT=\"${OBJROOT}/DependentBuilds\"\\\nBUILD_LIBRARIES_FOR_DISTRIBUTION=YES;\n\n\nxcodebuild -create-xcframework \\\n-framework \"${ARM64_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework\" \\\n-debug-symbols \"${ARM64_BUILD}/dSYMs/${FRAMEWORK_NAME}.framework.dSYM\" \\\n-debug-symbols \"${ARM64_BUILD}/BCSymbolMaps/${BCSYMBOLMAP_UUID}.bcsymbolmap\" \\\n-framework \"${X86_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME_SIMULATOR}.framework\" \\\n-output \"${UNIVERSAL_BUILD}\";\n\necho \"######################\"\necho \"# On Release, copy the result to release directory\"\necho \"######################\"\n\nOUTPUT_DIR=\"${PROJECT_DIR}/TPIAPBuild\"\n\ncp -r \"$UNIVERSAL_BUILD\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
+			shellScript = "echo \"######################\"\necho \"# Start building\"\necho \"######################\"\n\nset -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\n\necho \"######################\"\necho \"# Options\"\necho \"######################\"\n\nCONFIGURATION_BUILD=\"Release\"\nREVEAL_ARCHIVE_IN_FINDER=true\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\nFRAMEWORK_NAME_SIMULATOR=\"${PROJECT_NAME}_Simulator\"\n\nARM64_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-iphoneos/${FRAMEWORK_NAME}.xcarchive\"\nX86_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-iphonesimulator/${FRAMEWORK_NAME_SIMULATOR}.xcarchive\"\nUNIVERSAL_BUILD=\"${BUILD_DIR}/${CONFIGURATION_BUILD}-universal/${FRAMEWORK_NAME}.xcframework\"\n\n\necho \"######################\"\necho \"# Build Frameworks\"\necho \"######################\"\n\nxcodebuild clean build archive \\\n-scheme TPIAPReceiptLocally \\\n-configuration \"${CONFIGURATION_BUILD}\" \\\n-sdk iphoneos \\\n-destination \"generic/platform=iOS\" \\\n-archivePath \"${ARM64_BUILD}\" \\\n-UseModernBuildSystem=NO \\\nSKIP_INSTALL=NO \\\nOBJROOT=\"${OBJROOT}/DependentBuilds\"\\\nBUILD_LIBRARIES_FOR_DISTRIBUTION=YES;\n\nfunction GetUUID() {\n    # dwarfdump output:\n    # UUID: FFFFFFF-AAAAA-BBBB-CCCC-DDDDDDDDDD (arm64) PATH_TO_ARCHIVE/FRAMEWORK.framework-ios-arm64.xcarchive/Products/Library/Frameworks/FRAMEWORK.framework/FRAMEWORK\n    local arch=$1\n    local binary=$2\n    local dwarfdump_result=$(dwarfdump -u ${binary})\n    local regex=\"UUID: (.*) \\((.*)\\)\"\n    if [[ $dwarfdump_result =~ $regex ]]; then\n        local result_uuid=\"${BASH_REMATCH[1]}\"\n        local result_arch=\"${BASH_REMATCH[2]}\"\n        if [ \"$result_arch\" == \"$arch\" ]; then\n            echo $result_uuid\n        fi\n    fi\n}\n\nBCSYMBOLMAP_UUID=$(GetUUID \"arm64\" \"${ARM64_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\")\n\nxcodebuild archive \\\n-scheme TPIAPReceiptLocally-Simulator \\\n-configuration \"${CONFIGURATION_BUILD}\" \\\n-sdk iphonesimulator \\\n-destination \"generic/platform=iOS Simulator\" \\\n-archivePath \"${X86_BUILD}\" \\\n-UseModernBuildSystem=NO \\\nSKIP_INSTALL=NO \\\nOBJROOT=\"${OBJROOT}/DependentBuilds\"\\\nBUILD_LIBRARIES_FOR_DISTRIBUTION=YES;\n\n\nxcodebuild -create-xcframework \\\n-framework \"${ARM64_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework\" \\\n-debug-symbols \"${ARM64_BUILD}/dSYMs/${FRAMEWORK_NAME}.framework.dSYM\" \\\n-debug-symbols \"${ARM64_BUILD}/BCSymbolMaps/${BCSYMBOLMAP_UUID}.bcsymbolmap\" \\\n-framework \"${X86_BUILD}/Products/Library/Frameworks/${FRAMEWORK_NAME_SIMULATOR}.framework\" \\\n-output \"${UNIVERSAL_BUILD}\";\n\necho \"######################\"\necho \"# On Release, copy the result to release directory\"\necho \"######################\"\n\nOUTPUT_DIR=\"${PROJECT_DIR}/TPIAPBuild/\"\n\nrm -rf \"$OUTPUT_DIR\"\nmkdir \"$OUTPUT_DIR\"\ncp -rf \"$UNIVERSAL_BUILD\" \"$OUTPUT_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1464,10 +1464,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D36C96269D92B200C668E5 /* TPReceipt.m in Sources */,
-				A7D36C92269D92B200C668E5 /* TPIAPHelper.m in Sources */,
-				A7D36C8F269D92B200C668E5 /* TPIAPUtils.m in Sources */,
-				A7D36C97269D92B200C668E5 /* TPIAPReceipt.m in Sources */,
+				A7D36C96269D92B200C668E5 /* TPReceiptDecoder.m in Sources */,
+				A7D36C92269D92B200C668E5 /* TPReceiptHelper.m in Sources */,
+				A7D36C8F269D92B200C668E5 /* TPReceiptUtils.m in Sources */,
+				A7D36C97269D92B200C668E5 /* TPReceiptData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1475,7 +1475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D36AC3269D90C100C668E5 /* TPAPReceiptLocally_SimulatorTests.m in Sources */,
+				A7D36AC3269D90C100C668E5 /* TPIAPReceiptLocally_SimulatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1483,10 +1483,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D79024265E100F00B39397 /* TPReceipt.m in Sources */,
-				A794A129266721B7009AE52D /* TPIAPUtils.m in Sources */,
-				A7D7902D265E6C7A00B39397 /* TPIAPHelper.m in Sources */,
-				A7D79029265E51DE00B39397 /* TPIAPReceipt.m in Sources */,
+				A7D79024265E100F00B39397 /* TPReceiptDecoder.m in Sources */,
+				A794A129266721B7009AE52D /* TPReceiptUtils.m in Sources */,
+				A7D7902D265E6C7A00B39397 /* TPReceiptHelper.m in Sources */,
+				A7D79029265E51DE00B39397 /* TPReceiptData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1494,7 +1494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D78F39265E0F8600B39397 /* TPAPReceiptLocallyTests.m in Sources */,
+				A7D78F39265E0F8600B39397 /* TPIAPReceiptLocallyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

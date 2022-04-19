@@ -1,14 +1,14 @@
 //
 //  Receipt.m
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
 
-#import "TPReceipt.h"
+#import "TPReceiptDecoder.h"
 #import "OpenSSL.h"
-#import "TPIAPHelper.h"
-#import "TPIAPReceipt.h"
+#import "TPReceiptHelper.h"
+#import "TPReceiptData.h"
 #import <UIKit/UIKit.h>
 #import "TPReceiptEnum.h"
 
@@ -21,7 +21,7 @@ NSInteger const TPAppReceiptASN1TypeInAppPurchaseReceipt = 17;
 NSInteger const TPAppReceiptASN1TypeOriginalAppVersion = 19;
 NSInteger const TPAppReceiptASN1TypeExpirationDate = 21;
 
-@interface TPReceipt()
+@interface TPReceiptDecoder()
 
 @property (nonatomic, nullable) NSString *bundleIdString;
 @property (nonatomic, nullable) NSString *bundleVersionString;
@@ -40,7 +40,7 @@ NSInteger const TPAppReceiptASN1TypeExpirationDate = 21;
 @end
 
 
-@implementation TPReceipt
+@implementation TPReceiptDecoder
 
 - (nullable instancetype)initWithPaymentType:(TPProductType)paymentType AppBundle:(nonnull NSBundle*)appBundle andCertificateName:(nonnull NSString*)certificateName
 {
@@ -216,13 +216,13 @@ NSInteger const TPAppReceiptASN1TypeExpirationDate = 21;
             return;
         }
         
-        NSNumber *attributeType = [TPIAPHelper readASN1Integer:&p andMaxLength:length];
+        NSNumber *attributeType = [TPReceiptHelper readASN1Integer:&p andMaxLength:length];
         if (attributeType == NULL) {
             [self setReceiptStatus:kUnexpectedASN1Type];
             return;
         }
         
-        NSNumber *attributeType2 = [TPIAPHelper readASN1Integer:&p andMaxLength:end - p];
+        NSNumber *attributeType2 = [TPReceiptHelper readASN1Integer:&p andMaxLength:end - p];
         if (attributeType2 == NULL) {
             [self setReceiptStatus:kUnexpectedASN1Type];
             return;
@@ -237,33 +237,33 @@ NSInteger const TPAppReceiptASN1TypeExpirationDate = 21;
         switch (attributeType.longValue) {
             case TPAppReceiptASN1TypeBundleIdentifier: {
                 const uint8_t *pp = p;
-                [self setBundleIdString:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
-                [self setBundleIdData:[TPIAPHelper readASN1Data:&p andMaxLength:length]];
+                [self setBundleIdString:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
+                [self setBundleIdData:[TPReceiptHelper readASN1Data:&p andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeAppVersion: {
                 const uint8_t *pp = p;
-                [self setBundleVersionString:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
+                [self setBundleVersionString:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeOpaqueValue: {
                 const uint8_t *pp = p;
-                [self setOpaqueData:[TPIAPHelper readASN1Data:&pp andMaxLength:length]];
+                [self setOpaqueData:[TPReceiptHelper readASN1Data:&pp andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeHash: {
                 const uint8_t *pp = p;
-                [self setHashData:[TPIAPHelper readASN1Data:&pp andMaxLength:length]];
+                [self setHashData:[TPReceiptHelper readASN1Data:&pp andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeCreationDate: {
                 const uint8_t *pp = p;
-                [self setReceiptCreationDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                [self setReceiptCreationDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeInAppPurchaseReceipt: {
                 const uint8_t *pp = p;
-                TPIAPReceipt *parsedReceipt = [[TPIAPReceipt alloc] initWithPointer:pp andPayloadLength:length];
+                TPReceiptData *parsedReceipt = [[TPReceiptData alloc] initWithPointer:pp andPayloadLength:length];
                 NSString* originalTransactionID= parsedReceipt.originalTransactionIdentifier;
                 if (originalTransactionID == NULL) {
                     originalTransactionID = parsedReceipt.transactionIdentifer;
@@ -285,12 +285,12 @@ NSInteger const TPAppReceiptASN1TypeExpirationDate = 21;
                 break;
             case TPAppReceiptASN1TypeOriginalAppVersion: {
                 const uint8_t *pp = p;
-                [self setOriginalAppVersion:[TPIAPHelper readASN1String:&pp andMaxLength:length]];
+                [self setOriginalAppVersion:[TPReceiptHelper readASN1String:&pp andMaxLength:length]];
             }
                 break;
             case TPAppReceiptASN1TypeExpirationDate: {
                 const uint8_t *pp = p;
-                [self setExpirationDate:[TPIAPHelper readASN1Date:&pp andMaxLength:length]];
+                [self setExpirationDate:[TPReceiptHelper readASN1Date:&pp andMaxLength:length]];
             }
                 break;
             default:

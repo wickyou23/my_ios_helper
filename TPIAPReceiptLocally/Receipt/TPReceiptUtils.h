@@ -1,13 +1,13 @@
 //
 //  TPUtils.h
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 02/06/2021.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface TPIAPUtils : NSObject
+@interface TPReceiptUtils : NSObject
 
 +(nullable NSString*)generateSignatureLocallyWithPrivateKey:(nonnull NSData*)privateKeyData
                                                  andPayload:(nonnull NSString*)payload;

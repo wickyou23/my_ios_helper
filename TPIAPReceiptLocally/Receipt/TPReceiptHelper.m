@@ -1,14 +1,14 @@
 //
 //  IAPHelper.m
-//  TPAPReceiptLocally
+//  TPIAPReceiptLocally
 //
 //  Created by Thang Phung on 26/05/2021.
 //
 
-#import "TPIAPHelper.h"
+#import "TPReceiptHelper.h"
 #import "OpenSSL.h"
 
-@implementation TPIAPHelper
+@implementation TPReceiptHelper
 
 + (nullable NSNumber*)readASN1Integer:(const uint8_t **)p andMaxLength:(long)maxLength {
     int type = 0;
