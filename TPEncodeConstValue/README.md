@@ -1,6 +1,6 @@
 # TPEncodeConstValue
 
-##Generate a Secrets.swift by run shell script:
+Generate a **Secrets.swift** file by run shell script:
 
 > sh GeneratingSecretKeys.sh
 
