@@ -15,7 +15,8 @@
 #import "DarwinNotificationCenter.h"
 #import "Utils.h"
 
-NSString* const kRTCScreensharingSocketFD = @"rtc_SSFD";
+#define kRTCScreensharingSocketFD @"rtc_SSFD"
+#define kAppGroupID <Add app group id>
 
 @interface SampleHandler () <NSStreamDelegate>
 
@@ -32,9 +33,9 @@ NSString* const kRTCScreensharingSocketFD = @"rtc_SSFD";
 {
     self = [super init];
     if (self) {
-        NSURL* sharedContainer = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.tp.flutterwebrtc"];
+        NSURL* sharedContainer = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:kAppGroupID];
         if (sharedContainer) {
-            exLog(@"containerURLForSecurityApplicationGroupIdentifier: group.tp.flutterwebrtc");
+            exLog(@"containerURLForSecurityApplicationGroupIdentifier: %@", kAppGroupID);
             _socketFilePath = [[sharedContainer URLByAppendingPathComponent:kRTCScreensharingSocketFD] path];
             _clientConnection = [[SocketConnection alloc] initWithFilePath:_socketFilePath];
             [self setupConnectionCallback];
