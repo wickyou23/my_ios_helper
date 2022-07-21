@@ -19,14 +19,6 @@ NSString* const kRTCScreensharingSocketFD = @"rtc_SSFD";
 
 @interface SampleHandler () <NSStreamDelegate>
 
-//@property (nonatomic, assign) int serverSocket;
-//
-//@property (nonatomic, strong) NSThread *networkThread;
-//@property (nonatomic, strong) NSInputStream *inputStream;
-//@property (nonatomic, strong) NSOutputStream *outputStream;
-//
-//@property (nonatomic, strong) dispatch_source_t listeningSource;
-
 @property (nonatomic, strong) SocketConnection* clientConnection;
 @property (nonatomic, strong) SampleUploader* uploader;
 @property (nonatomic, assign) NSInteger frameCount;
